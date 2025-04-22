@@ -10,6 +10,7 @@ namespace RedoCapstone
     {
         protected string species;
 
+        public int StaminaPoints { get; set; }
         public int HealthPoints { get; set; }
         public List<IEquipable> Equipment { get; set; }
 
