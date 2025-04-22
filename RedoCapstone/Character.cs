@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RedoCapstone
 {
-    internal class Character : IHasHP
+    internal class Character : IHasHealth, IHasStamina
     {
 
         string name;
@@ -14,15 +14,20 @@ namespace RedoCapstone
         int dex;
         int con;
         int wil;
-        public int Hitpoints { get; set; }
+        public int HealthPoints { get; set; }
+        public int StaminaPoints { get; set; }
 
-        Character(string name, string race, int dex, int con, int wil)
+        Character(string name, string race, int dex, int con, int wil, int healthPoints, int staminaPoints)
         {
             this.name = name;
             this.race = race;
             this.dex = dex;
             this.con = con;
             this.wil = wil;
+
+            HealthPoints = healthPoints;
+            StaminaPoints = staminaPoints;
+
         }
 
     }

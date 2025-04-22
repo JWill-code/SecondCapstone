@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace RedoCapstone
 {
-    public interface IHasHealth
+    public interface IHasStamina
     {
-        int HealthPoints { get; set; }
+        int StaminaPoints { get; set; }
     }
 }

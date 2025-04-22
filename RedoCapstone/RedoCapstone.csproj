@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="IHasStamina.cs" />
     <Compile Include="IHasHP.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Form1.cs">
