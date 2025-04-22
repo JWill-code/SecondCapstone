@@ -28,6 +28,7 @@ namespace RedoCapstone
         {
             Form1 form = new Form1();
             form.Show();
+            //commit test
         }
 
         private void button1_Click(object sender, EventArgs e)
