@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="IHasEquipment.cs" />
     <Compile Include="IHasAttributes.cs" />
     <Compile Include="IHasInventory.cs" />
+    <Compile Include="IEquipable.cs" />
     <Compile Include="LivingEntity.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="IHasStamina.cs" />

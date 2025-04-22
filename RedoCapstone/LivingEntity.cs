@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RedoCapstone
 {
-    internal class LivingEntity: Entity , IHasAttributes
+    internal class LivingEntity: Entity , IHasAttributes, IHasEquipment
     {
         protected string species;
 
