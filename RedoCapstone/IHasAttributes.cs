@@ -8,8 +8,14 @@ namespace RedoCapstone
 {
     public interface IHasAttributes
     {
-        int DexterityScore { get; set; }
-        int ConstitutionScore { get; set; }
-        int WillpowerScore { get; set; }
+
+        int GetDexterityScore();
+        int GetConstitutionScore();
+        int GetWillpowerScore();
+
+        int BaseDexterityScore { set; get; }
+        int BaseConstitutionScore { set; get; }
+        int BaseWillpowerScore { set; get; }
+
     }
 }

@@ -13,9 +13,9 @@ namespace RedoCapstone
         {
             this.name = name;
             this.species = species;
-            this.DexterityScore = dex;
-            this.ConstitutionScore = con;
-            this.WillpowerScore = wil;
+            this.BaseDexterityScore = dex;
+            this.BaseConstitutionScore = con;
+            this.BaseWillpowerScore = wil;
 
             HealthPoints = healthPoints;
             StaminaPoints = staminaPoints;
