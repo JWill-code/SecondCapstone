@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RedoCapstone
 {
-    internal class Entity
+    public interface IHasHP
     {
+        int Hitpoints { get; set; }
     }
 }
