@@ -10,6 +10,43 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Program.cs = Program.cs
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		CharacterCreate.cs = CharacterCreate.cs
+		CharacterCreate.Designer.cs = CharacterCreate.Designer.cs
+		CharacterCreate.resx = CharacterCreate.resx
+		Form1.cs = Form1.cs
+		Form1.Designer.cs = Form1.Designer.cs
+		Form1.resx = Form1.resx
+		Form2.cs = Form2.cs
+		Form2.Designer.cs = Form2.Designer.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Structure", "Structure", "{01A4172E-D20B-4B92-A2D0-32C7313D4612}"
+	ProjectSection(SolutionItems) = preProject
+		Character.cs = Character.cs
+		Entity.cs = Entity.cs
+		LivingEntity.cs = LivingEntity.cs
+		Object.cs = Object.cs
+		Program.cs = Program.cs
+		User.cs = User.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XML", "XML", "{492B4E5F-B5BF-4AEE-B04A-046BC1DBEB87}"
+	ProjectSection(SolutionItems) = preProject
+		XMLDatabase.cs = XMLDatabase.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{FB84B550-8179-4428-9A41-9BF333EF4EC9}"
+	ProjectSection(SolutionItems) = preProject
+		IEquipable.cs = IEquipable.cs
+		IHasAttributes.cs = IHasAttributes.cs
+		IHasEquipment.cs = IHasEquipment.cs
+		IHasHealth.cs = IHasHealth.cs
+		IHasInventory.cs = IHasInventory.cs
+		IHasStamina.cs = IHasStamina.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
