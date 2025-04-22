@@ -15,7 +15,7 @@ namespace RedoCapstone
         List<string> name = new List<string>();
         List<string> species = new List<string>();
         //the species will be handled later
-        species.add("dwarf");
+        //species.add("dwarf");
         public static Form1 instance;
         public Form1()
         {
