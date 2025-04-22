@@ -15,7 +15,7 @@ class XMLDatabase{
         Console.Write("Enter level: ");
         int level = int(Console.ReadLine());
         Console.Write("Enter Race: ");
-        string class = Console.ReadLine();
+        string race = Console.ReadLine();
 
         // this is just going to be a basic stat point distribution. Can make it more advanced later
             Console.Write("Strength (base = 8): ");
@@ -29,11 +29,11 @@ class XMLDatabase{
             Console.Write("Wisdom (base = 8): ");
             int wis = int(Console.ReadLine());
             Console.Write("Charisma (base = 8): ");
-            int charisma = int(Console.ReadLine());
+            int crisma = int(Console.ReadLine());
 
         XElement charactersXML = new XElement("Characters",
             new XElement("Character",
-                new Xelement("Character Name", charName),
+                new Xelement("CharacterName", charName),
                 new Xelement("Class", cls),
                 new Xelement("Level", level),
                 new Xelement("Race", race),
@@ -42,7 +42,7 @@ class XMLDatabase{
                 new Xelement("Constitution", cons),
                 new Xelement("Intelligence", intel),
                 new Xelement("Wisdom", wis),
-                new Xelement("Charisma"), charisma)
+                new Xelement("Charisma"), crisma)
         );
         // Save to Database
         charactersXML.Save("characters.xml");
@@ -51,5 +51,28 @@ class XMLDatabase{
         // Reading XML Database
         XDocument doc = XDocument.Load"(characters.xml");
 
+        // storing and displaying data from database
+        foreach(XElement user in doc.Root.Elements("Character")){
+            string name = user.Element("CharacterName").Value;
+            string charClass = user.Element("Class").Value;
+            string lvl = user.Element("Level").Value;
+            string rce = user.Element("Race").Value;
+            int strength = user.Element("Strength").Value;
+            int dexterity = user.Element("Dexterity").Value;
+            int constitution = user.Element("Constitution").Value;
+            int intelligence = user.Element("Intelligence").Value;
+            int charisma = user.Element("Charisma").Value;
+
+            //display the character data
+            Console.WriteLine($"Character name: {name}");
+            Console.WriteLine($"Class: {charClass}");
+            Console.WriteLine($"Level: {lvl}");
+            Console.WriteLine($"Race: {rce}");
+            Console.WriteLine($"Strength: {strength}");
+            Console.WriteLine($"Dexterity: {dexterity}");
+            Console.WriteLine($"Constitution: {constitution}");
+            Console.WriteLine($"Intelligence: {intelligence}");
+            Console.WriteLine($"Charisma: {charisma}");
+        }
     }
 }
