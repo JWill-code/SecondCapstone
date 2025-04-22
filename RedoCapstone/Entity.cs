@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace RedoCapstone
 {
-    public class Entity : IHasHealth
+    public class Entity
     {
         protected string name;
         protected int weight = 0;
-        public int HealthPoints { get; set; }
+        
     }
 }
