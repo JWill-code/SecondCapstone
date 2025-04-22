@@ -28,12 +28,13 @@ namespace RedoCapstone
         {
             Form1 form = new Form1();
             form.Show();
-            //commit test
+            //this will move back to the home screen
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //ensure that all material is saved fro drop down tab list
+            //list uses LivingEntity.
         }
     }
 }

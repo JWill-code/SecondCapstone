@@ -16,6 +16,7 @@ namespace RedoCapstone
             this.DexterityScore = dex;
             this.ConstitutionScore = con;
             this.WillpowerScore = wil;
+            //these are all LivingEntity
 
             HealthPoints = healthPoints;
             StaminaPoints = staminaPoints;

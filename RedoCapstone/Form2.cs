@@ -15,6 +15,7 @@ namespace RedoCapstone
         public Form2()
         {
             InitializeComponent();
+            //this gui will contain char sheet where fewer attributes can be edited.
         }
     }
 }
