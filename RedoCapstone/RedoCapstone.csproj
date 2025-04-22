@@ -47,8 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="IHasAttributes.cs" />
+    <Compile Include="IHasInventory.cs" />
+    <Compile Include="LivingEntity.cs" />
+    <Compile Include="Entity.cs" />
     <Compile Include="IHasStamina.cs" />
-    <Compile Include="IHasHP.cs" />
+    <Compile Include="IHasHealth.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
