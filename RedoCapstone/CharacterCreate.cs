@@ -15,9 +15,11 @@ namespace RedoCapstone
         public static CharacterCreate instance;
         public CharacterCreate()
         {
-            InitializeComponent();
+            
             instance = this;
         }
+
+        
 
         private void CharacterCreate_Load(object sender, EventArgs e)
         {
@@ -35,6 +37,18 @@ namespace RedoCapstone
         {
             //ensure that all material is saved fro drop down tab list
             //list uses LivingEntity.
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // CharacterCreate
+            // 
+            this.ClientSize = new System.Drawing.Size(1338, 538);
+            this.Name = "CharacterCreate";
+            this.ResumeLayout(false);
+
         }
     }
 }

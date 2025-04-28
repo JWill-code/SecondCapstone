@@ -50,9 +50,9 @@
     <Compile Include="CharacterCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CharacterCreate.Designer.cs">
+    <EmbeddedResource Include="CharacterCreate.Designer.cs">
       <DependentUpon>CharacterCreate.cs</DependentUpon>
-    </Compile>
+    </EmbeddedResource>
     <Compile Include="Entity.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
