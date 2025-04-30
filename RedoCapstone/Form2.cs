@@ -17,5 +17,15 @@ namespace RedoCapstone
             InitializeComponent();
             //this gui will contain char sheet where fewer attributes can be edited.
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
