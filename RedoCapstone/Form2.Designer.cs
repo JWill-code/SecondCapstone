@@ -69,5 +69,6 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListBox CharListBox; //contains character entities that are already made
+        //List<Character
     }
 }
