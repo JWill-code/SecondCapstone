@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.CharListBox = new System.Windows.Forms.ListBox();
+            this.CharListBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(495, 40);
+            this.textBox1.Location = new System.Drawing.Point(93, 28);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 22);
+            this.textBox1.Size = new System.Drawing.Size(243, 58);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "List of already made characters: ";
+            this.textBox1.Text = "List of already made characters: select character name to see sheet ";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // CharListBox
             // 
+            this.CharListBox.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.CharListBox.FormattingEnabled = true;
-            this.CharListBox.ItemHeight = 16;
-            this.CharListBox.Location = new System.Drawing.Point(495, 104);
+            this.CharListBox.Location = new System.Drawing.Point(93, 135);
             this.CharListBox.Name = "CharListBox";
-            this.CharListBox.Size = new System.Drawing.Size(120, 84);
+            this.CharListBox.Size = new System.Drawing.Size(201, 24);
             this.CharListBox.TabIndex = 1;
-            this.CharListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // Form2
             // 
@@ -68,7 +68,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox CharListBox; //contains character entities that are already made
+        private System.Windows.Forms.ComboBox CharListBox;
         //List<Character
     }
 }
