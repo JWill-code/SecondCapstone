@@ -14,9 +14,9 @@ namespace RedoCapstone
             this.name = name; //primary key
             //CharListBox.Text;
             this.species = species;
-            this.DexterityScore = dex;
-            this.ConstitutionScore = con;
-            this.WillpowerScore = wil;
+            this.BaseDexterityScore = dex;
+            this.BaseConstitutionScore = con;
+            this.BaseWillpowerScore = wil;
             //these are all LivingEntity
 
             HealthPoints = healthPoints;
