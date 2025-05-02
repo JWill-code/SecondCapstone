@@ -3,8 +3,7 @@ using System.Xml.Linq;
 
 class XMLDatabase{
 
-    static void Main
-    {
+    public static void RunXml(){
         // This will grab the user's information and store it in a database that will eventually be updateable and retreiveable
 
         int statPoints = 27;
@@ -20,37 +19,38 @@ class XMLDatabase{
 
         // this is just going to be a basic stat point distribution. Can make it more advanced later
             Console.Write("Strength (base = 8): ");
-            int str = int(Console.ReadLine());
+            int str = int.Parse(Console.ReadLine());
             Console.Write("Dexterity (base = 8): ");
-            int dex = int(Console.ReadLine());
+            int dex = int.Parse(Console.ReadLine());
             Console.Write("Constitution (base = 8): ");
-            int cons = int(Console.ReadLine());
+            int cons = int.Parse(Console.ReadLine());
             Console.Write("Intelligence (base = 8): ");
-            int intel = int(Console.ReadLine());
+            int intel = int.Parse(Console.ReadLine());
             Console.Write("Wisdom (base = 8): ");
-            int wis = int(Console.ReadLine());
+            int wis = int.Parse(Console.ReadLine());
             Console.Write("Charisma (base = 8): ");
-            int crisma = int(Console.ReadLine());
+            int crisma = int.Parse(Console.ReadLine());
 
         XElement charactersXML = new XElement("Characters",
             new XElement("Character",
-                new Xelement("CharacterName", charName),
-                new Xelement("Class", cls),
-                new Xelement("Level", level),
-                new Xelement("Race", race),
-                new Xelement("Strength", str),
-                new Xelement("Dexterity", dex),
-                new Xelement("Constitution", cons),
-                new Xelement("Intelligence", intel),
-                new Xelement("Wisdom", wis),
-                new Xelement("Charisma"), crisma)
+                new XElement("CharacterName", charName),
+                new XElement("Class", cls),
+                new XElement("Level", level),
+                new XElement("Race", race),
+                new XElement("Strength", str),
+                new XElement("Dexterity", dex),
+                new XElement("Constitution", cons),
+                new XElement("Intelligence", intel),
+                new XElement("Wisdom", wis),
+                new XElement("Charisma", crisma)
+            )
         );
         // Save to Database
         charactersXML.Save("characters.xml");
         Console.WriteLine("XML database saved as characters.xml");
 
         // Reading XML Database
-        XDocument doc = XDocument.Load"(characters.xml");
+        XDocument doc = XDocument.Load("characters.xml");
 
         // storing and displaying data from database
         foreach(XElement user in doc.Root.Elements("Character")){
