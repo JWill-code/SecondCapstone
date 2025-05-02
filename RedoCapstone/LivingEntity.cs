@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+
 
 namespace RedoCapstone
 {
@@ -11,7 +13,7 @@ namespace RedoCapstone
         protected string species;
 
         public int HealthPoints { get; set; }
-        public List<IEquipable> Equipment { get; set; }
+        public List<Entity> Equipment { get; set; }
 
         public void DonItem(Entity entity) { }
         public void DofItem(Entity entity) { }
@@ -24,5 +26,9 @@ namespace RedoCapstone
         public int GetConstitutionScore() { return this.BaseConstitutionScore; }
         public int GetWillpowerScore() { return this.BaseWillpowerScore; }
 
+        public override XElement ToXElement()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace RedoCapstone
 {
     internal interface IHasEquipment
     {
-        List<IEquipable> Equipment { get; set; }
+        List<Entity> Equipment { get; set; }
         void DonItem(Entity entity);
         void DofItem(Entity entity);
     }

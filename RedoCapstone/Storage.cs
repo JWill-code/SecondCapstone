@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace RedoCapstone
 {
@@ -16,6 +17,11 @@ namespace RedoCapstone
         }
 
         public void RemoveItem(Entity entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override XElement ToXElement()
         {
             throw new NotImplementedException();
         }

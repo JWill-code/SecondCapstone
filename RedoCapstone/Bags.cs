@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace RedoCapstone
 {
-    internal class Bags : IEquipable
+    internal class Bags : Item, IEquipable, IHasInventory
     {
-        public string Name => throw new NotImplementedException();
 
-        public int Weight => throw new NotImplementedException();
+        public List<Entity> Inventory { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public void AddItem(Entity entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveItem(Entity entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

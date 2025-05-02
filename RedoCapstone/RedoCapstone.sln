@@ -36,6 +36,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Structure", "Structure", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XML", "XML", "{492B4E5F-B5BF-4AEE-B04A-046BC1DBEB87}"
 	ProjectSection(SolutionItems) = preProject
+		LoadXML.cs = LoadXML.cs
 		XMLDatabase.cs = XMLDatabase.cs
 	EndProjectSection
 EndProject
