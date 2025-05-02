@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RedoCapstone
 {
-    internal class Character : LivingEntity, IHasStamina, IHasAttributes
+    internal class Character : LivingEntity, IHasStamina
     {
         public int StaminaPoints { get; set; }
         Character(string name, string species, int dex, int con, int wil, int healthPoints, int staminaPoints)

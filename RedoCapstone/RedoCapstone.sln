@@ -24,11 +24,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{02EA681E-C7D8-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Structure", "Structure", "{01A4172E-D20B-4B92-A2D0-32C7313D4612}"
 	ProjectSection(SolutionItems) = preProject
+		Bags.cs = Bags.cs
 		Character.cs = Character.cs
 		Entity.cs = Entity.cs
 		LivingEntity.cs = LivingEntity.cs
 		Object.cs = Object.cs
 		Program.cs = Program.cs
+		Storage.cs = Storage.cs
 		User.cs = User.cs
 	EndProjectSection
 EndProject
