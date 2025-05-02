@@ -13,7 +13,7 @@ class XMLDatabase{
         Console.Write("Enter Class: ");
         string cls = Console.ReadLine();
         Console.Write("Enter level: ");
-        int level = int.Parse(Console.ReadLine());
+        int level = int(Console.ReadLine());
         Console.Write("Enter Race: ");
         string race = Console.ReadLine();
 
@@ -58,11 +58,11 @@ class XMLDatabase{
             string charClass = user.Element("Class").Value;
             string lvl = user.Element("Level").Value;
             string rce = user.Element("Race").Value;
-            int strength = int.Parse(user.Element("Strength").Value);
-            int dexterity = int.Parse(user.Element("Dexterity").Value);
-            int constitution = int.Parse(user.Element("Constitution").Value);
-            int intelligence = int.Parse(user.Element("Intelligence").Value);
-            int charisma = int.Parse(user.Element("Charisma").Value);
+            int strength = user.Element("Strength").Value;
+            int dexterity = user.Element("Dexterity").Value;
+            int constitution = user.Element("Constitution").Value;
+            int intelligence = user.Element("Intelligence").Value;
+            int charisma = user.Element("Charisma").Value;
 
             //display the character data
             Console.WriteLine($"Character name: {name}");
