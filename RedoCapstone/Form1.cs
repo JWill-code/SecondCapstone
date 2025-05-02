@@ -25,7 +25,8 @@ namespace RedoCapstone
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //this contains the title which will needs to be updated
+            //this contains the title which will need to be updated
+            //I don't know if you guys want a picture
         }
 
         private void button1_Click(object sender, EventArgs e)

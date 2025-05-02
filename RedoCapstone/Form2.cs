@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,12 +21,29 @@ namespace RedoCapstone
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            //this will not change at all.
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            //this will change with every character name selected from combobox
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //switches tabs with CharacterCreate UI. this works fine
+            new CharacterCreate().Show();
+        }
+
+        private void CharListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //once changed, the listbox will change contents to match the character with given name.
+            //each attribute will be on a separate line.
         }
     }
 }

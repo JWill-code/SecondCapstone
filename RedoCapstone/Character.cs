@@ -11,18 +11,23 @@ namespace RedoCapstone
         public int StaminaPoints { get; set; }
         Character(string name, string species, int dex, int con, int wil, int healthPoints, int staminaPoints)
         {
-            this.name = name;
+            this.name = name; //primary key
+            //CharListBox.Text;
             this.species = species;
-            this.BaseDexterityScore = dex;
-            this.BaseConstitutionScore = con;
-            this.BaseWillpowerScore = wil;
-
+            this.DexterityScore = dex;
+            this.ConstitutionScore = con;
+            this.WillpowerScore = wil;
             //these are all LivingEntity
 
             HealthPoints = healthPoints;
             StaminaPoints = staminaPoints;
+            
 
         }
+        /*the goal is to have the name of the character as a primary key and then
+         for the combobox where all the names are stored, click one and see all attributes. 
+        I just need buttons to go between the pages.*/
+        
 
     }
 }
