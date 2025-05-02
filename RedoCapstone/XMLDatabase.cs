@@ -3,7 +3,8 @@ using System.Xml.Linq;
 
 class XMLDatabase{
 
-    static void Main{
+    static void Main
+    {
         // This will grab the user's information and store it in a database that will eventually be updateable and retreiveable
 
         int statPoints = 27;
