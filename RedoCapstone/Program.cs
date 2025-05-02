@@ -14,6 +14,8 @@ namespace RedoCapstone
         [STAThread]
         static void Main()
         {
+            //Currently disabled while testing rest of application.
+            //XMLDatabase.RunXml();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

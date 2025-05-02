@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace RedoCapstone
 {
-    internal class Character : LivingEntity, IHasStamina
+    internal class Character : LivingEntity, IHasStamina, IHasAttributes
     {
         public int StaminaPoints { get; set; }
         Character(string name, string species, int dex, int con, int wil, int healthPoints, int staminaPoints)
         {
             this.name = name;
             this.species = species;
-            this.DexterityScore = dex;
-            this.ConstitutionScore = con;
-            this.WillpowerScore = wil;
+            this.BaseDexterityScore = dex;
+            this.BaseConstitutionScore = con;
+            this.BaseWillpowerScore = wil;
+
             //these are all LivingEntity
 
             HealthPoints = healthPoints;
