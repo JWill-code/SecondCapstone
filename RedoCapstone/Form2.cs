@@ -39,6 +39,11 @@ namespace RedoCapstone
             //switches tabs with CharacterCreate UI. this works fine
             new CharacterCreate().Show();
         }
+        private void selectAndStart(object sender, EventArgs e)
+        {
+            //starts game
+            //this will be the button to start the game with the selected character
+        }
 
         private void CharListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
