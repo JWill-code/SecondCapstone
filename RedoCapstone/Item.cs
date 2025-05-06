@@ -7,8 +7,17 @@ using System.Xml.Linq;
 
 namespace RedoCapstone
 {
-    internal class Item : Entity
+    public class Item : Entity
     {
+        public int quantity;
+
+        public Item(int quantity)
+        {
+            this.quantity = quantity;
+        }
+
+        public Item() { }
+
         public override XElement ToXElement()
         {
             return new XElement("Item",

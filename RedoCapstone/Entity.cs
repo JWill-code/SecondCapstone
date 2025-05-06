@@ -9,6 +9,7 @@ namespace RedoCapstone
 {
     public abstract class Entity : ISaveable
     {
+        protected int id;
         protected string name;
         protected int weight = 0;
 

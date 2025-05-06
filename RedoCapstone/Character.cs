@@ -16,15 +16,14 @@ namespace RedoCapstone
         //Defualt Constructor - mostly a place holder / testing tool
         public Character() { }
 
-        public Character(string name, string species, int dex, int con, int wil, int healthPoints, int staminaPoints)
+        public Character(int id, string name, string species, int dex, int con, int wil, int healthPoints, int staminaPoints)
         {
-            this.name = name; //primary key
-            //CharListBox.Text;
+            this.id = id; //primary key
+            this.name = name;
             this.species = species;
             this.BaseDexterityScore = dex;
             this.BaseConstitutionScore = con;
             this.BaseWillpowerScore = wil;
-            //these are all LivingEntity
 
             HealthPoints = healthPoints;
             StaminaPoints = staminaPoints;
@@ -34,10 +33,13 @@ namespace RedoCapstone
         public override XElement ToXElement()
         {
             return new XElement("Character",
+                new XAttribute("id", id),
+                new XAttribute("type", "Character"),
                 new XElement("Name", name),
                 new XElement("Weight", weight),
                 new XElement("Species", species),
-                new XElement("Stamina", StaminaPoints),
+                new XElement("HealthPoints", HealthPoints),
+                new XElement("StaminaPoints", StaminaPoints),
                 new XElement("Dexterity", BaseDexterityScore),
                 new XElement("Constitution", BaseConstitutionScore),
                 new XElement("Willpower", BaseWillpowerScore),

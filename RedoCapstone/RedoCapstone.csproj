@@ -55,6 +55,12 @@
       <DependentUpon>CharacterCreate.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Entity.cs" />
+    <Compile Include="CharacterViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterViewerForm.Designer.cs">
+      <DependentUpon>CharacterViewerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TitleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <Compile Include="XMLDatabase.cs" />
     <EmbeddedResource Include="CharacterCreate.resx">
       <DependentUpon>CharacterCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharacterViewerForm.resx">
+      <DependentUpon>CharacterViewerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleForm.resx">
       <DependentUpon>TitleForm.cs</DependentUpon>
