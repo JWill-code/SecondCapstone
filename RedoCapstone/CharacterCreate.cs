@@ -17,7 +17,12 @@ namespace RedoCapstone
         private Button BackToHome;
         private Button button1;
         private Button PrevChar;
+        private TextBox enterAtt; //enter num/string
+        private Button SaveChar;
         public static CharacterCreate instance;
+        //make character collection
+        //character attribute, string or int attached to it
+        Dictionary<string, object> charValues = new Dictionary<string, object>();
         public CharacterCreate()
         {
 
@@ -55,6 +60,8 @@ namespace RedoCapstone
             this.CreateStartButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.PrevChar = new System.Windows.Forms.Button();
+            this.enterAtt = new System.Windows.Forms.TextBox();
+            this.SaveChar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Characteristics
@@ -106,15 +113,37 @@ namespace RedoCapstone
             this.PrevChar.UseVisualStyleBackColor = true;
             this.PrevChar.Click += new System.EventHandler(this.PrevChar_Click);
             // 
+            // enterAtt
+            // 
+            this.enterAtt.Location = new System.Drawing.Point(450, 384);
+            this.enterAtt.Multiline = true;
+            this.enterAtt.Name = "enterAtt";
+            this.enterAtt.Size = new System.Drawing.Size(151, 63);
+            this.enterAtt.TabIndex = 3;
+            this.enterAtt.Text = "can edit char attribute number/name here";
+            // 
+            // SaveChar
+            // 
+            this.SaveChar.Location = new System.Drawing.Point(647, 264);
+            this.SaveChar.Name = "SaveChar";
+            this.SaveChar.Size = new System.Drawing.Size(134, 23);
+            this.SaveChar.TabIndex = 4;
+            this.SaveChar.Text = "Save Character";
+            this.SaveChar.UseVisualStyleBackColor = true;
+            this.SaveChar.Click += new System.EventHandler(this.button2_Click);
+            // 
             // CharacterCreate
             // 
             this.ClientSize = new System.Drawing.Size(1168, 538);
+            this.Controls.Add(this.SaveChar);
+            this.Controls.Add(this.enterAtt);
             this.Controls.Add(this.PrevChar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.CreateStartButton);
             this.Controls.Add(this.Characteristics);
             this.Name = "CharacterCreate";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -129,6 +158,7 @@ namespace RedoCapstone
             ComboBox combo = sender as ComboBox;
             string selectedItem = combo.SelectedItem.ToString();
             //textbox will then be able to change and have user enter double/int/string.
+            
         }
         private void PrevChar_Click(object sender, EventArgs e)
         {
@@ -138,5 +168,38 @@ namespace RedoCapstone
             newForm.ShowDialog();  // This blocks until closed
             this.Close();  // Clean up after dialog is closed
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //save char button
+            string selectedField = Characteristics.SelectedItem.ToString();
+            string input = enterAtt.Text.Trim();
+
+            object value;
+
+            // Try to parse integer, else keep as string
+            if (int.TryParse(input, out int intVal))
+            {
+                value = intVal;
+            }
+            else
+            {
+                value = input;
+            }
+
+            // Store the value
+            charValues[selectedField] = value;
+
+        }
+        private void enterAtt_TextChanged(object sender, EventArgs e)
+        {
+            //this will allow the user to enter a number or string
+            //this will be used to edit the character's attributes
+            SaveChar.Enabled = true;
+            enterAtt.Enabled = true;
+            enterAtt.Text = "can edit char attribute number/name here";
+            enterAtt.Focus();
+        }
+
     }
 }
