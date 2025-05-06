@@ -12,7 +12,7 @@ namespace RedoCapstone
 {
     public partial class CharacterCreate : Form
     {
-        private ComboBox comboBox1;
+        private ComboBox Characteristics;
         private Button CreateStartButton;
         private Button BackToHome;
         private Button button1;
@@ -51,20 +51,30 @@ namespace RedoCapstone
 
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Characteristics = new System.Windows.Forms.ComboBox();
             this.CreateStartButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.PrevChar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // Characteristics
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(450, 263);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 24);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Characteristics.FormattingEnabled = true;
+            this.Characteristics.Items.AddRange(new object[] {
+            "Name",
+            "Weight",
+            "Species",
+            "Stamina",
+            "Dexterity",
+            "Constitution",
+            "Willpower",
+            "Equipment"});
+            this.Characteristics.Location = new System.Drawing.Point(450, 263);
+            this.Characteristics.Name = "Characteristics";
+            this.Characteristics.Size = new System.Drawing.Size(151, 24);
+            this.Characteristics.TabIndex = 0;
+            this.Characteristics.Text = "Character";
+            this.Characteristics.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // CreateStartButton
             // 
@@ -102,7 +112,7 @@ namespace RedoCapstone
             this.Controls.Add(this.PrevChar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.CreateStartButton);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Characteristics);
             this.Name = "CharacterCreate";
             this.ResumeLayout(false);
 
@@ -110,12 +120,15 @@ namespace RedoCapstone
 
         private void CreateStartButton_Click(object sender, EventArgs e)
         {
-            //starts game. again i don't know how
+            //starts game. again i don't know how this is supposed to work.
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //select characteristic, type in number or species
+            ComboBox combo = sender as ComboBox;
+            string selectedItem = combo.SelectedItem.ToString();
+            //textbox will then be able to change and have user enter double/int/string.
         }
         private void PrevChar_Click(object sender, EventArgs e)
         {
