@@ -42,7 +42,7 @@ namespace RedoCapstone
         private void BackToHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 newForm = new Form1();
+            formTitleScreen newForm = new formTitleScreen();
             newForm.ShowDialog();  // This blocks until closed
             this.Close();  // Clean up after dialog is closed
             //this will move back to the home screen
