@@ -15,9 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{02EA681E-C7D8-
 		CharacterCreate.cs = CharacterCreate.cs
 		CharacterCreate.Designer.cs = CharacterCreate.Designer.cs
 		CharacterCreate.resx = CharacterCreate.resx
-		Form1.cs = Form1.cs
-		Form1.Designer.cs = Form1.Designer.cs
-		Form1.resx = Form1.resx
 		Form2.cs = Form2.cs
 		Form2.Designer.cs = Form2.Designer.cs
 	EndProjectSection

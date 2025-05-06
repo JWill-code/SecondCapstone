@@ -10,31 +10,25 @@ using System.Windows.Forms;
 
 namespace RedoCapstone
 {
-    public partial class Form1 : Form
+    public partial class formTitleScreen : Form
     {
         List<string> name = new List<string>();
         List<string> species = new List<string>();
         //the species will be handled later
         //species.add("dwarf");
-        public static Form1 instance;
-        public Form1()
+        public static formTitleScreen instance;
+        public formTitleScreen()
         {
             InitializeComponent();
             instance = this; //when created, save instance
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            //this contains the title which will need to be updated
-            //I don't know if you guys want a picture
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCharSelect_Click(object sender, EventArgs e)
         {
             //I don't remember what this does
         }
 
-        private void StartButton_Click(object sender, EventArgs e)
+        private void btnCharCreate_Click(object sender, EventArgs e)
         {
             //switches tabs with CharacterCreate UI
             this.Hide();
@@ -42,5 +36,11 @@ namespace RedoCapstone
             newForm.ShowDialog();  // This blocks until closed
             this.Close();  // Clean up after dialog is closed
         }
+
+        private void TitleForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
