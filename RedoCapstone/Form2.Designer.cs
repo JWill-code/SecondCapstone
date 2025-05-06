@@ -76,6 +76,7 @@ namespace RedoCapstone
             this.select.TabIndex = 3;
             this.select.Text = "Select and Start Game";
             this.select.UseVisualStyleBackColor = true;
+            this.select.Click += new System.EventHandler(this.button1_Click);
             // 
             // button1
             // 

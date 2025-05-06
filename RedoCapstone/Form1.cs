@@ -37,8 +37,10 @@ namespace RedoCapstone
         private void StartButton_Click(object sender, EventArgs e)
         {
             //switches tabs with CharacterCreate UI
-            CharacterCreate form = new CharacterCreate();
-            form.Show();
+            this.Hide();
+            CharacterCreate newForm = new CharacterCreate();
+            newForm.ShowDialog();  // This blocks until closed
+            this.Close();  // Clean up after dialog is closed
         }
     }
 }
