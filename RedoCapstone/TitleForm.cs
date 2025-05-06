@@ -25,9 +25,13 @@ namespace RedoCapstone
 
         private void btnCharSelect_Click(object sender, EventArgs e)
         {
-            //switches tabs with CharacterCreate UI
-            this.Hide();
-            CharacterViewerForm newForm = new CharacterViewerForm();
+
+
+            Character character1 = new Character(0, "Bob", "Elf","Adventurer", 0, 0, 0, 10, 10);
+            Item item1 = new Item(1, "Sword", 1, "A Warriors Weapon", 2);
+            character1.DonItem(item1);
+
+            CharacterViewerForm newForm = new CharacterViewerForm(character1);
             newForm.ShowDialog();  // This blocks until closed
             this.Close();  // Clean up after dialog is closed
         }

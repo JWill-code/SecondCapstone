@@ -12,9 +12,31 @@ namespace RedoCapstone
 {
     public partial class CharacterViewerForm : Form
     {
-        public CharacterViewerForm()
+        public CharacterViewerForm(Character character)
         {
             InitializeComponent();
+            // Fill form fields with character data
+            txtName.Text = character.name;
+            txtSpecies.Text = character.species;
+            numHP.Value = character.HealthPoints;
+            numStamina.Value = character.StaminaPoints;
+            txtDex.Text = character.GetDexterityScore().ToString();
+            txtCon.Text = character.GetConstitutionScore().ToString();
+            txtWill.Text = character.GetConstitutionScore().ToString();
+
+            lstInventory.Items.Clear();
+            foreach (var entity in character.Equipment)
+            {
+                ListViewItem item = new ListViewItem(entity.name);
+
+                item.Tag = entity;
+                item.SubItems.Add(entity.type);
+                item.SubItems.Add(entity.description);
+                item.SubItems.Add(entity.quantity.ToString());
+                item.SubItems.Add(entity.weight.ToString());
+
+                lstInventory.Items.Add(item);
+            }
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)

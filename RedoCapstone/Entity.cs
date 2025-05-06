@@ -9,9 +9,12 @@ namespace RedoCapstone
 {
     public abstract class Entity : ISaveable
     {
-        protected int id;
-        protected string name;
-        protected int weight = 0;
+        public int id;
+        public string name;
+        public string description;
+        public int weight;
+        public string type;
+        public int quantity;
 
         //Method for generating an xml object from the characters info
         public abstract XElement ToXElement();

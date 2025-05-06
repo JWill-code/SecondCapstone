@@ -57,7 +57,7 @@ namespace RedoCapstone
             this.btnRemoveItem = new System.Windows.Forms.Button();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.lblInventory = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstInventory = new System.Windows.Forms.ListView();
             this.invName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.invType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.invDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -302,7 +302,7 @@ namespace RedoCapstone
             this.tableLayoutPanel.Controls.Add(this.txtCon, 1, 5);
             this.tableLayoutPanel.Controls.Add(this.lblWill, 0, 6);
             this.tableLayoutPanel.Controls.Add(this.txtWill, 1, 6);
-            this.tableLayoutPanel.Controls.Add(this.listView1, 0, 9);
+            this.tableLayoutPanel.Controls.Add(this.lstInventory, 0, 9);
             this.tableLayoutPanel.Controls.Add(this.btnLoad, 0, 10);
             this.tableLayoutPanel.Controls.Add(this.flowLayoutPanel1, 1, 8);
             this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -337,33 +337,33 @@ namespace RedoCapstone
             this.lblInventory.TabIndex = 21;
             this.lblInventory.Text = "Inventory";
             // 
-            // listView1
+            // lstInventory
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstInventory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.invName,
             this.invType,
             this.invDescription,
             this.invQuantity,
             this.invWeight});
-            this.tableLayoutPanel.SetColumnSpan(this.listView1, 2);
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.GridLines = true;
+            this.tableLayoutPanel.SetColumnSpan(this.lstInventory, 2);
+            this.lstInventory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstInventory.GridLines = true;
             listViewGroup1.Header = "Eqiupment";
             listViewGroup1.Name = "Equipment";
-            this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            this.lstInventory.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup1});
-            this.listView1.HideSelection = false;
+            this.lstInventory.HideSelection = false;
             listViewItem1.Group = listViewGroup1;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            this.lstInventory.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(3, 283);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(786, 631);
-            this.listView1.TabIndex = 20;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
+            this.lstInventory.Location = new System.Drawing.Point(3, 283);
+            this.lstInventory.Name = "lstInventory";
+            this.lstInventory.Size = new System.Drawing.Size(786, 631);
+            this.lstInventory.TabIndex = 20;
+            this.lstInventory.UseCompatibleStateImageBehavior = false;
+            this.lstInventory.View = System.Windows.Forms.View.Details;
+            this.lstInventory.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
             // 
             // invName
             // 
@@ -460,7 +460,7 @@ namespace RedoCapstone
         private System.Windows.Forms.Label lblHP;
         private System.Windows.Forms.NumericUpDown numHP;
         private System.Windows.Forms.NumericUpDown numStamina;
-        private ListView listView1;
+        private ListView lstInventory;
         private ColumnHeader invName;
         private ColumnHeader invType;
         private ColumnHeader invDescription;

@@ -9,18 +9,20 @@ using System.Xml.Linq;
 
 namespace RedoCapstone
 {
-    internal class Character : LivingEntity, IHasStamina
+    public class Character : LivingEntity, IHasStamina
     {
         public int StaminaPoints { get; set; }
 
         //Defualt Constructor - mostly a place holder / testing tool
         public Character() { }
 
-        public Character(int id, string name, string species, int dex, int con, int wil, int healthPoints, int staminaPoints)
+        public Character(int id, string name, string species,string description, int dex, int con, int wil, int healthPoints, int staminaPoints)
         {
             this.id = id; //primary key
+            this.type = "Character";
             this.name = name;
             this.species = species;
+            this.description = description;
             this.BaseDexterityScore = dex;
             this.BaseConstitutionScore = con;
             this.BaseWillpowerScore = wil;
@@ -28,6 +30,8 @@ namespace RedoCapstone
             HealthPoints = healthPoints;
             StaminaPoints = staminaPoints;
         }
+
+
 
         //Method for generating an xml object from the characters info
         public override XElement ToXElement()
