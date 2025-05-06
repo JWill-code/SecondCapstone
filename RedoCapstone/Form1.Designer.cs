@@ -38,10 +38,11 @@
             this.textBox1.Location = new System.Drawing.Point(251, 91);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(423, 46);
+            this.textBox1.Size = new System.Drawing.Size(450, 50);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Capstone Dungeon Crawler";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            const string StartTitle = "Capstone Dungeon Crawler";
+            this.textBox1.Text = StartTitle;
+            //this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // startButton
             // 
