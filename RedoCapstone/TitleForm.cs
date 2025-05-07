@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RedoCapstone
@@ -27,7 +21,7 @@ namespace RedoCapstone
         {
 
 
-            Character character1 = new Character(0, "Bob", "Elf","Adventurer", 0, 0, 0, 10, 10);
+            Character character1 = new Character(0, "Bob", "Elf", "Adventurer", 0, 0, 0, 10, 10);
             Item item1 = new Item(1, "Sword", 1, "A Warriors Weapon", 2);
             character1.DonItem(item1);
 

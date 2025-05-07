@@ -1,9 +1,11 @@
 using System;
 using System.Xml.Linq;
 
-class XMLDatabase{
+class XMLDatabase
+{
 
-    public static void RunXml() {
+    public static void RunXml()
+    {
         // This will grab the user's information and store it in a database that will eventually be updateable and retreiveable
 
         int statPoints = 27;
@@ -18,18 +20,18 @@ class XMLDatabase{
         string race = Console.ReadLine();
 
         // this is just going to be a basic stat point distribution. Can make it more advanced later
-            Console.Write("Strength (base = 8): ");
-            int str = int.Parse(Console.ReadLine());
-            Console.Write("Dexterity (base = 8): ");
-            int dex = int.Parse(Console.ReadLine());
-            Console.Write("Constitution (base = 8): ");
-            int cons = int.Parse(Console.ReadLine());
-            Console.Write("Intelligence (base = 8): ");
-            int intel = int.Parse(Console.ReadLine());
-            Console.Write("Wisdom (base = 8): ");
-            int wis = int.Parse(Console.ReadLine());
-            Console.Write("Charisma (base = 8): ");
-            int crisma = int.Parse(Console.ReadLine());
+        Console.Write("Strength (base = 8): ");
+        int str = int.Parse(Console.ReadLine());
+        Console.Write("Dexterity (base = 8): ");
+        int dex = int.Parse(Console.ReadLine());
+        Console.Write("Constitution (base = 8): ");
+        int cons = int.Parse(Console.ReadLine());
+        Console.Write("Intelligence (base = 8): ");
+        int intel = int.Parse(Console.ReadLine());
+        Console.Write("Wisdom (base = 8): ");
+        int wis = int.Parse(Console.ReadLine());
+        Console.Write("Charisma (base = 8): ");
+        int crisma = int.Parse(Console.ReadLine());
 
         XElement charactersXML = new XElement("Characters",
             new XElement("Character",
@@ -53,7 +55,8 @@ class XMLDatabase{
         XDocument doc = XDocument.Load("characters.xml");
 
         // storing and displaying data from database
-        foreach(XElement user in doc.Root.Elements("Character")){
+        foreach (XElement user in doc.Root.Elements("Character"))
+        {
             string name = user.Element("CharacterName").Value;
             string charClass = user.Element("Class").Value;
             string lvl = user.Element("Level").Value;

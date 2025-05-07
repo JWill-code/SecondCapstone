@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Xml.Linq;
 
 namespace RedoCapstone
@@ -16,7 +10,7 @@ namespace RedoCapstone
         //Defualt Constructor - mostly a place holder / testing tool
         public Character() { }
 
-        public Character(int id, string name, string species,string description, int dex, int con, int wil, int healthPoints, int staminaPoints)
+        public Character(int id, string name, string species, string description, int dex, int con, int wil, int healthPoints, int staminaPoints)
         {
             this.id = id; //primary key
             this.type = "Character";

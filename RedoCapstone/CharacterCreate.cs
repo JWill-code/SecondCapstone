@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RedoCapstone
@@ -158,7 +152,7 @@ namespace RedoCapstone
             ComboBox combo = sender as ComboBox;
             string selectedItem = combo.SelectedItem.ToString();
             //textbox will then be able to change and have user enter double/int/string.
-            
+
         }
         private void PrevChar_Click(object sender, EventArgs e)
         {
